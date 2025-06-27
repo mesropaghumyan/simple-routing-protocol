@@ -1,0 +1,14 @@
+[Unit]
+Description=Protocole de routage dynamique
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/dynamic_routing
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
